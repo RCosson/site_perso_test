@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}RCosson - contact{% endblock %}
+
+{% block body %}
+  <div class="content">
+    <form method="POST" action="{{path('mail')}}">
+      <input type="text" name="name" required placeholder="Votre nom">
+      <input type="text" name="email" required placeholder="Votre adresse mail">
+      <input type="textarea" name="message" required placeholder="Votre message">
+      <input type="submit" value="Send">
+    </form>
+  </div>
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block javascripts %}
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+{% endblock %}
